@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons8-text-64 .png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/sample.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <title>Text Summarizer</title>
+  </head>
+
+  <body>
+
+
+    <!-- Website Title-->
+    <div class = "container">
+         <h2 class='container-heading'><span>Text Summarizer</span></h2>
+         <span>PDF file only</span>
+         <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    </div>
+
+
+     <div class = 'ml-container'>
+      <form action="{{ url_for('predict') }}" method="POST"  enctype="multipart/form-data"  >
+          <input type="file" name="upload" id="up" placeholder="PDF ONLY" /><br/>
+          <input type = "submit"  class="my-cta-button"/>
+      </form>
+    </div>
+
+    <h6>OR</h6>
+
+    <div class = 'ml-container'>
+      <form action="{{ url_for('predict2') }}" method="POST">
+           <textarea class='message-box' name="message" rows="10" cols="20" placeholder="Enter Your Text Here..."></textarea><br/>
+           <input type="submit" class="my-cta-button" value="Submit">
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/newstown19/text-summarizer-deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/rohan-singh-6b606a14b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Made with ❤️ by Rohan Singh.</p>
+        </div>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons8-text-64 .png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/sample.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+         <h2 class='container-heading'><span>Text Summarizer</span></h2>
+         <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    </div>
+
+    <div>
+
+       {%for (i,txt) in dict_pages %}
+          <h5>Summary Page {{i}} </h5>
+          {% if txt == "" %}
+             <p class='result-p' >No Text to Display</p>
+          {% else %}
+              <p>{{txt}}</p>
+          {% endif %}
+        {% endfor %}
+
+
+
+
+    </div>
+    <!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/newstown19/text-summarizer-deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/rohan-singh-6b606a14b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Made with ❤️ by Rohan Singh.</p>
+        </div>
+  </body>
+</html>
